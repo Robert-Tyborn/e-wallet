@@ -1,0 +1,42 @@
+@import url("https://fonts.cdnfonts.com/css/source-sans-pro");
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
+
+.cardform-form {
+  font-family: "PT Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  margin: 13px;
+}
+.cardform-form input::placeholder {
+  font-size: 18px;
+  font-style: italic;
+}
+.input-big {
+  width: 382px;
+  height: 56px;
+  border: solid 1px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.input-small {
+  width: 175px;
+  height: 56px;
+  border: solid 1px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.valid-cvv-flex {
+  display: flex;
+}
+.add-card-btn {
+  font-family: "Source Sans Pro", sans-serif;
+  width: 382px;
+  height: 80px;
+  font-weight: 700;
+  font-size: 22px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+}

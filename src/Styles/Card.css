@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
+
+.card {
+  width: 382px;
+  height: 241px;
+  background-color:#D7D7D7;
+  border-radius: 10px;
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.102);  
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.card-images {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    padding-bottom: 0;
+}
+.card-number {
+    font-family: "PT Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 29px;
+    margin: auto;
+    margin-left: 1.5rem;
+}
+
+.card-valid {
+    font-family: "PT Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    color: rgba(0, 0, 0, 0.797);
+}
+.card-name {
+    font-family: "PT Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card-names, .card-dates {
+    display: flex;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+.card-firstname-lastname, .card-month-year {
+    margin-top: 0px;
+    line-height: 0cap;
+}
