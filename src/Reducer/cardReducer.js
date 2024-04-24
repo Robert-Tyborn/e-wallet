@@ -7,7 +7,8 @@ const cardSlice = createSlice({
   initialState,
   reducers: {
     addCard(state, action) {
-      return state.push(action.payload);
+      console.log("Card added:", action.payload);
+      state.push(action.payload);
     },
   },
 });
