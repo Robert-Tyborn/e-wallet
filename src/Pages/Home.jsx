@@ -11,7 +11,7 @@ function Home() {
     cardNumber: "XXXX XXXX XXXX XXXX",
     cardholderName: "FIRSTNAME LASTNAME",
     validThruMMYY: "MM/YY",
-    ccv: "123",
+    ccv: "",
     vendor: "",
   };
 
