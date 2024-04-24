@@ -14,7 +14,7 @@ const CardForm = ({ formData, onChange, onSubmit }) => {
           onChange={onChange}
           placeholder="XXXX XXXX XXXX XXXX"
         />
-      </label>
+      </label>  
       <label>
         CARDHOLDER NAME
         <input
