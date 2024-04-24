@@ -12,12 +12,17 @@ function Card({ formData }) {
   };
 
   const backgroundColor = vendorBackgroundColors[vendor];
+  const isWhiteText = vendor === "Ninja bank" || vendor === "Evil corp"; 
+  const chipImage = vendor === "Ninja bank" ? "chip-light.svg" : "chip-dark.svg"; 
+
 
   return (
+    <div className={`card ${isWhiteText ? "white-text" : ""}`} style={{ backgroundColor: backgroundColor }}>
+
     <div className="card" style={{ backgroundColor: backgroundColor }}>
       <div className="card-images">
         <div className="card-chip">
-          <img src="src/Assets/chip-dark.svg" alt="" />
+        <img src={`src/Assets/${chipImage}`} alt="" />
         </div>
         <div className="card-vendor">
           {vendor && <img src={`src/Assets/vendor-${vendor}.svg`} alt="" />}
@@ -29,8 +34,8 @@ function Card({ formData }) {
         <h2 className="card-number">XXXX XXXX XXXX XXXX</h2>
       )}
       <div className="card-valid">
-        <h3>CARDHOLDER NAME</h3>
-        <h3>VALID THRU</h3>
+      <h3 className={isWhiteText ? "white-text" : ""}>CARDHOLDER NAME</h3>
+        <h3 className={isWhiteText ? "white-text" : ""}>VALID THRU</h3>
       </div>
       <div className="card-name">
         <div className="card-names">
@@ -42,6 +47,7 @@ function Card({ formData }) {
           <h4 className="card-month-year">{validThruMMYY || "MM/YY"}</h4>
         </div>
       </div>
+    </div>
     </div>
   );
 }
