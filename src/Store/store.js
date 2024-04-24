@@ -3,7 +3,7 @@ import cardReducer from "../Reducer/cardReducer";
 
 const store = configureStore({
   reducer: {
-    card: cardReducer
+    card: cardReducer,
   },
 });
 

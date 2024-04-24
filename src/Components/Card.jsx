@@ -12,11 +12,15 @@ function Card({ formData }) {
   };
 
   const backgroundColor = vendorBackgroundColors[vendor];
-  const isWhiteText = vendor === "Ninja bank" || vendor === "Evil corp"; 
-  const chipImage = vendor === "Ninja bank" ? "chip-light.svg" : "chip-dark.svg"; 
+  const isWhiteText = vendor === "Ninja bank" || vendor === "Evil corp";
+  const chipImage =
+    vendor === "Ninja bank" ? "chip-light.svg" : "chip-dark.svg";
 
   return (
-    <div className={`card ${isWhiteText ? "white-text" : ""}`} style={{ backgroundColor: backgroundColor }}>
+    <div
+      className={`card ${isWhiteText ? "white-text" : ""}`}
+      style={{ backgroundColor: backgroundColor }}
+    >
       <div className="card" style={{ backgroundColor: backgroundColor }}>
         <div className="card-images">
           <div className="card-chip">
@@ -42,7 +46,9 @@ function Card({ formData }) {
             </h4>
           </div>
           <div className="card-dates">
-            <h4 className="card-month-year">{(validThruMMYY || "MM/YY").toUpperCase()}</h4>
+            <h4 className="card-month-year">
+              {(validThruMMYY || "MM/YY").toUpperCase()}
+            </h4>
           </div>
         </div>
       </div>

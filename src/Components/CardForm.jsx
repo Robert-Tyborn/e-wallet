@@ -13,9 +13,9 @@ const CardForm = ({ formData, onChange, onSubmit }) => {
           value={formData.cardNumber}
           onChange={onChange}
           placeholder="XXXX XXXX XXXX XXXX"
-          required 
+          required
         />
-      </label>  
+      </label>
       <label>
         CARDHOLDER NAME
         <input
@@ -25,7 +25,7 @@ const CardForm = ({ formData, onChange, onSubmit }) => {
           value={formData.cardholderName}
           onChange={onChange}
           placeholder="FIRSTNAME LASTNAME"
-          required 
+          required
         />
       </label>
       <div className="valid-cvv-flex">
@@ -39,7 +39,7 @@ const CardForm = ({ formData, onChange, onSubmit }) => {
               value={formData.validThruMMYY}
               onChange={onChange}
               placeholder="MM/YY"
-              required 
+              required
             />
           </label>
         </div>
@@ -53,7 +53,7 @@ const CardForm = ({ formData, onChange, onSubmit }) => {
               value={formData.ccv}
               onChange={onChange}
               placeholder="XXX"
-              required 
+              required
             />
           </label>
         </div>
@@ -65,7 +65,7 @@ const CardForm = ({ formData, onChange, onSubmit }) => {
           name="vendor"
           value={formData.vendor}
           onChange={onChange}
-          required 
+          required
         >
           <option value="" disabled>
             -- Select vendor --

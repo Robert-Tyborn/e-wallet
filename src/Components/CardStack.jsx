@@ -11,7 +11,7 @@ function CardStack({ activeCard, onCardClick }) {
       {Array.isArray(cards) &&
         cards.map((card, index) => {
           if (card === activeCard) {
-            return null; 
+            return null;
           }
           return (
             <div
