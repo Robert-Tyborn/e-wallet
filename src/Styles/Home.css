@@ -13,6 +13,9 @@
   text-align: center;
   padding: 1rem;
 }
+.button-container {
+ margin-top: 23rem;
+}
 .new-card-btn {
   display: inline-flex;
   align-items: center; 

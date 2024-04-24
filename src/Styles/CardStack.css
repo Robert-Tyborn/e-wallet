@@ -1,0 +1,18 @@
+.card-stack-container {
+    position: relative;
+  }
+  
+  .card-stack-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-2rem); 
+    z-index: 1;
+    padding-top: 1rem;
+    margin-left: 1rem;
+  }
+  
+  /* .card-stack-item + .card-stack-item {
+    margin-top: 2rem;
+  }
+   */

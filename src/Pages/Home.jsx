@@ -20,9 +20,11 @@ function Home() {
       </div>
       <Card formData={formData} />
       <CardStack />
+      <div className="button-container">
       <Link to="/addcard" className="new-card-btn">
         ADD A NEW CARD
       </Link>
+      </div>
     </div>
   );
 }
