@@ -15,39 +15,37 @@ function Card({ formData }) {
   const isWhiteText = vendor === "Ninja bank" || vendor === "Evil corp"; 
   const chipImage = vendor === "Ninja bank" ? "chip-light.svg" : "chip-dark.svg"; 
 
-
   return (
     <div className={`card ${isWhiteText ? "white-text" : ""}`} style={{ backgroundColor: backgroundColor }}>
-
-    <div className="card" style={{ backgroundColor: backgroundColor }}>
-      <div className="card-images">
-        <div className="card-chip">
-        <img src={`src/Assets/${chipImage}`} alt="" />
+      <div className="card" style={{ backgroundColor: backgroundColor }}>
+        <div className="card-images">
+          <div className="card-chip">
+            <img src={`src/Assets/${chipImage}`} alt="" />
+          </div>
+          <div className="card-vendor">
+            {vendor && <img src={`src/Assets/vendor-${vendor}.svg`} alt="" />}
+          </div>
         </div>
-        <div className="card-vendor">
-          {vendor && <img src={`src/Assets/vendor-${vendor}.svg`} alt="" />}
+        {cardNumber ? (
+          <h2 className="card-number">{cardNumber}</h2>
+        ) : (
+          <h2 className="card-number">XXXX XXXX XXXX XXXX</h2>
+        )}
+        <div className="card-valid">
+          <h3 className={isWhiteText ? "white-text" : ""}>CARDHOLDER NAME</h3>
+          <h3 className={isWhiteText ? "white-text" : ""}>VALID THRU</h3>
+        </div>
+        <div className="card-name">
+          <div className="card-names">
+            <h4 className="card-firstname-lastname">
+              {(cardholderName || "FIRSTNAME LASTNAME").toUpperCase()}
+            </h4>
+          </div>
+          <div className="card-dates">
+            <h4 className="card-month-year">{(validThruMMYY || "MM/YY").toUpperCase()}</h4>
+          </div>
         </div>
       </div>
-      {cardNumber ? (
-        <h2 className="card-number">{cardNumber}</h2>
-      ) : (
-        <h2 className="card-number">XXXX XXXX XXXX XXXX</h2>
-      )}
-      <div className="card-valid">
-      <h3 className={isWhiteText ? "white-text" : ""}>CARDHOLDER NAME</h3>
-        <h3 className={isWhiteText ? "white-text" : ""}>VALID THRU</h3>
-      </div>
-      <div className="card-name">
-        <div className="card-names">
-          <h4 className="card-firstname-lastname">
-            {cardholderName || "FIRSTNAME LASTNAME"}
-          </h4>
-        </div>
-        <div className="card-dates">
-          <h4 className="card-month-year">{validThruMMYY || "MM/YY"}</h4>
-        </div>
-      </div>
-    </div>
     </div>
   );
 }
