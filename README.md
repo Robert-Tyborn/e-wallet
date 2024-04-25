@@ -1,7 +1,7 @@
 # e-wallet
 
 SPA Digital wallet for credit cards.
-React-router, local storage, Redux and Redux toolkit used. 
+React-router, local storage, Redux and Redux toolkit was used. 
 Built accroding to given Figma design and examination specs.
 
 Add credit cards.
