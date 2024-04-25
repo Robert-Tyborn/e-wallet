@@ -27,13 +27,17 @@ const cardSlice = createSlice({
     addCard(state, action) {
       state.push(action.payload);
     },
+    removeCard(state, action) {
+      const cardToRemove = action.payload;
+      return state.filter(card => card.cardNumber !== cardToRemove.cardNumber);
+    },
     initializeCards(state, action) {
       return action.payload;
     },
   },
 });
 
-export const { addCard, initializeCards } = cardSlice.actions;
+export const { addCard, removeCard, initializeCards } = cardSlice.actions;
 
 export const initializeCardsFromLocalStorage = () => {
   return (dispatch) => {

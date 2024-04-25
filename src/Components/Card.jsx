@@ -1,7 +1,7 @@
 import React from "react";
 import "../Styles/Card.css";
 
-function Card({ formData, isActive }) {
+function Card({ formData, onDelete }) {
   const { cardNumber, cardholderName, validThruMMYY, vendor } = formData;
 
   const vendorBackgroundColors = {
@@ -27,9 +27,7 @@ function Card({ formData, isActive }) {
             <img src={`src/Assets/${chipImage}`} alt="" />
           </div>
           <div className="card-vendor">
-            {vendor && (
-              <img src={`src/Assets/vendor-${vendor}.svg`} alt="" />
-            )}
+            {vendor && <img src={`src/Assets/vendor-${vendor}.svg`} alt="" />}
           </div>
         </div>
         {cardNumber ? (
@@ -53,7 +51,7 @@ function Card({ formData, isActive }) {
             </h4>
           </div>
         </div>
-        {isActive && <button className="dlt-btn">DELETE</button>}
+        {onDelete && <button className="dlt-btn" onClick={onDelete}>DELETE</button>}
       </div>
     </div>
   );
