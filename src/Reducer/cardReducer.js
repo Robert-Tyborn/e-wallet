@@ -27,17 +27,28 @@ const cardSlice = createSlice({
     addCard(state, action) {
       state.push(action.payload);
     },
-  },
-  extraReducers: (builder) => {
-    builder.addMatcher(
-      (action) => action.type.startsWith("card"),
-      (state) => {
-        saveCardsToLocalStorage(state);
-      }
-    );
+    initializeCards(state, action) {
+      return action.payload;
+    },
   },
 });
 
-export const { addCard } = cardSlice.actions;
+export const { addCard, initializeCards } = cardSlice.actions;
+
+export const initializeCardsFromLocalStorage = () => {
+  return (dispatch) => {
+    const cards = loadCardsFromLocalStorage();
+    dispatch(initializeCards(cards));
+  };
+};
+
+export const saveCardsToLocalStorageMiddleware = (store) => (next) => (action) => {
+  const result = next(action);
+  if (action.type.startsWith("card")) {
+    const state = store.getState();
+    saveCardsToLocalStorage(state.card);
+  }
+  return result;
+};
 
 export default cardSlice.reducer;
