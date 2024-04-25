@@ -26,9 +26,11 @@ function AddCard() {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(addCard(formData));
-    console.log("Form submitted:", formData);
+    const existingCards = JSON.parse(localStorage.getItem('cards')) || [];
+    localStorage.setItem('cards', JSON.stringify([...existingCards, formData]));
     navigate("/");
   };
+  
 
   return (
     <div>
