@@ -25,9 +25,9 @@ function Home() {
         <h1 className="home-title">E-WALLET</h1>
       </div>
       {activeCard ? (
-        <Card formData={activeCard} />
+        <Card formData={activeCard} isActive={true} /> 
       ) : (
-        <Card formData={formData} />
+        <Card formData={formData} isActive={false} /> 
       )}
       <CardStack activeCard={activeCard} onCardClick={handleCardClick} />
       <div className="button-container">

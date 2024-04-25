@@ -9,6 +9,9 @@
   margin: auto;
   margin-bottom: 2rem;
 }
+.dlt-btn {
+  transform: translateY(-16rem) translateX(18rem);
+}
 .card-images {
   display: flex;
   justify-content: space-between;
