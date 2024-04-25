@@ -11,6 +11,9 @@
 }
 .dlt-btn {
   transform: translateY(-16rem) translateX(18rem);
+  background-color: black;
+  color: white;
+  border: none;
 }
 .card-images {
   display: flex;
